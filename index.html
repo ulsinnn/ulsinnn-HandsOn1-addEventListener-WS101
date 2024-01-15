@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finals-HandsOn1</title>
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        html {
+            background: url(bg1.jpg) center center fixed;
+            background-size: cover;
+        }
+        body {
+            margin: 0;
+        }
+        .wrap {
+            background-image: url('h1.png');
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .cont {
+            border: none;
+            height: 250px;
+            flex-direction: column;
+            width: 900px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            text-align: center;
+            border-radius: 50px ;
+            background-color: rgba(0, 0, 0, 0.551);
+            backdrop-filter: blur(1%); 
+            color: blue;
+            font-size: 18px;
+           
+        }
+        #btn1, #btn2, #btn3 {
+            padding: 8px;
+            color: black;
+            margin: 5px;
+            width: 100px;
+            border-radius: 4px;
+            border: none;
+            background-color: #F9EFDB;
+            font-size: 15px;
+            transition: height 0.5s ease, width .5s, background-color 1s ease;
+        }
+        #btn1:hover, #btn2:hover, #btn3:hover {
+            transform: scale(2.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border: 2px solid  #0f2cac;
+            background-color: red;
+            font-weight: bold;
+            letter-spacing: 1px; 
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+                padding-top: 0;
+            }
+            .header {
+                text-align: center;
+                padding-bottom: 15px;
+            }
+            .content {
+                height: 290px;
+            }
+            .buttons {
+                padding-bottom: 50px;
+                
+            }
+            
+
+        } 
+    </style>
+</head>
+<body>
+    <h1 class="header"><br></h1>
+    <div class="wrap">
+        <div class="cont">
+            <div class="buttons">
+                <button id="btn1">Click me!</button>
+                <button id="btn2">Click me!</button>
+                <button id="btn3">Click me!</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function 1
+        function button1Clicked() {
+            alert("Button 1 was clicked!");
+        }
+        // Function 2
+        function button2Clicked() {
+            alert("Button 2 was clicked!");
+        }
+
+        // Function 3
+        function button3Clicked() {
+            alert("Button 3 was clicked!");
+        }
+
+        // Adding event listeners to buttons
+        document.getElementById("btn1").addEventListener("click", button1Clicked);
+        document.getElementById("btn2").addEventListener("click", button2Clicked);
+        document.getElementById("btn3").addEventListener("click", button3Clicked);
+    </script>
+
+</body>
+</html>
